@@ -11,7 +11,7 @@
     state: "present"
     reload: yes
   with_items: '{{ quagga_sysctl_network_settings }}'
-  when: quagga_sysctl_network_settings is defined
+  when: quagga_sysctl_network_settings
 
 - name: quagga_config | Configuring Quagga
   template:

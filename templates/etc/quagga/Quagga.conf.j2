@@ -4,6 +4,7 @@ hostname {{ quagga_hostname }}
 password {{ quagga_password }}
 enable password {{ quagga_enable_password }}
 service password-encryption
+service integrated-vtysh-config
 !
 {% if quagga_logging.facility.enabled %}
 log facility {{ quagga_logging.facility.facility }}

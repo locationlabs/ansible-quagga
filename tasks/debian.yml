@@ -7,6 +7,7 @@
     - 'ifenslave'
     - 'lldpd'
     - 'vlan'
+  when: "'Cumulus' not in ansible_lsb.id"
 
 - name: debian | installing quagga
   apt:
@@ -28,3 +29,4 @@
   with_items:
     - 'bash.bashrc'
     - 'environment'
+  when: "'Cumulus' not in ansible_lsb.id"

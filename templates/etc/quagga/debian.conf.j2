@@ -1,6 +1,6 @@
 #
 vtysh_enable=yes
-zebra_options=" --daemon -A 127.0.0.1 -P 2601 -u {{ quagga_user }} -g quagga --keep_kernel --retain"
+zebra_options=" --daemon -A 127.0.0.1 -P 2601 -u {{ quagga_user }} -g quagga --keep_kernel --retain {{ quagga_zebra_options }}"
 bgpd_options=" --daemon -A 127.0.0.1 -P 2605 -u {{ quagga_user }} -g quagga --retain -p 179"
 ospfd_options=" --daemon -A 127.0.0.1 -P 2604 -u {{ quagga_user }} -g quagga"
 ospf6d_options=" --daemon -A ::1 -P 2606 -u {{ quagga_user }} -g quagga"

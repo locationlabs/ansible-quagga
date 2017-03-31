@@ -56,6 +56,11 @@ interface {{ qdi.int }}
  ip address {{ qdi.address }}/{{ qdi.cidr }}
  ipv6 nd suppress-ra
 {%     endif %}
+{%     if qdi.ospf is defined %}
+{%       for ospf in qdi.ospf %}
+ ip ospf {{ ospf }}
+{%       endfor %}
+{%     endif %}
 {%   endfor %}
 !
 {% endif %}
